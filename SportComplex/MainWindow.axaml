@@ -1,0 +1,70 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="SportComplex.MainWindow"
+        Title="Sports Complex">
+        <Grid>
+                <StackPanel Orientation="Vertical">
+                        <TextBlock VerticalAlignment= "Center"> Для поиска введите имя клиента: </TextBlock>
+              <TextBox Name="txtSearch" Width="200" TextChanged="TxtSearch_OnTextChanged"> </TextBox>
+              
+                        <ComboBox Name="txtFilter" SelectionChanged="TxtFilter_OnSelectionChanged">
+                                <ComboBoxItem>Все столбцы</ComboBoxItem>
+                                <ComboBoxItem>Код</ComboBoxItem>
+                                <ComboBoxItem>Фамилия</ComboBoxItem>
+                                <ComboBoxItem>Имя</ComboBoxItem>
+                                <ComboBoxItem>Номер телефона</ComboBoxItem>
+                
+                        </ComboBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                        <DataGrid Name="ClientGrid" x:CompileBindings="False" 
+                               
+                                  AutoGenerateColumns="False"
+                                  IsReadOnly="True"
+                                  GridLinesVisibility="All"
+                                  BorderThickness="1"
+                                  BorderBrush="gray"
+                                  Margin="0, 20">
+                        <DataGrid.Columns>
+                                <DataGridTextColumn Header="Client_id" Binding="{Binding Client_id}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Name" Binding="{Binding Name}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Surname" Binding="{Binding Surname}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Phone_number" Binding="{Binding Phone_number}"></DataGridTextColumn>
+                        </DataGrid.Columns>
+              
+                </DataGrid>
+                      </StackPanel>
+                <Button
+                        x:Name="DirectionWindow"
+                        Click="DirectionWindow_OnClick"
+                        Content="Перейти к просмотру направлений" 
+                        HorizontalAlignment="Right" 
+                        Margin="10"/>
+                
+                <Button
+                        x:Name="SubscribeWindow"
+                        Click="SubscribeWindow_OnClick"
+                        Content="Перейти к просмотру записей на занятие" 
+                        HorizontalAlignment="Left" 
+                        
+                        />
+                <Button
+                        x:Name="EditClients"
+                        Click="EditClients_OnClick"
+                        Content="Редактировать клиента"
+                        HorizontalAlignment="Center"
+                />
+                <Button
+                        x:Name="DeleteClients"
+                        Click="DeleteClients_OnClick"
+                        Content="Удалить клиента"
+                        HorizontalAlignment="Center"
+                        />
+          
+        </Grid>
+ 
+        
+</Window>

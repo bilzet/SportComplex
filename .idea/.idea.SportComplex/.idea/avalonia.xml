@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="Gym/App.axaml" value="Gym/Gym.csproj" />
+        <entry key="Gym/Instructor.axaml" value="Gym/Gym.csproj" />
+        <entry key="Gym/MainWindow.axaml" value="Gym/Gym.csproj" />
+        <entry key="SportComplex/App.axaml" value="SportComplex/SportComplex.csproj" />
+        <entry key="SportComplex/Direction.axaml" value="SportComplex/SportComplex.csproj" />
+        <entry key="SportComplex/MainWindow.axaml" value="SportComplex/SportComplex.csproj" />
+        <entry key="SportComplex/Models/Subscribe.axaml" value="SportComplex/SportComplex.csproj" />
+        <entry key="SportComplex/Subscribe.axaml" value="SportComplex/SportComplex.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

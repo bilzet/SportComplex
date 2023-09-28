@@ -1,0 +1,24 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="SportComplex.Direction"
+        Title="Direction">
+        <Grid>
+                <DataGrid x:Name="DirectionGrid" 
+                          x:CompileBindings="False"
+                          AutoGenerateColumns="False"
+                          IsReadOnly="True"
+                          GridLinesVisibility="All"
+                          BorderThickness="1"
+                          BorderBrush="Gray"
+                          Margin="0, 20">
+                        <DataGrid.Columns>
+                                <DataGridTextColumn Header="Direction_id" Binding="{Binding Direction_id}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Name" Binding="{Binding Name}"></DataGridTextColumn>
+                                <DataGridTextColumn Header="Age" Binding="{Binding Age}"></DataGridTextColumn>
+                        </DataGrid.Columns>
+                </DataGrid>
+        </Grid>
+</Window>

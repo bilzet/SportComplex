@@ -1,0 +1,26 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="SportComplex.Subscribe"
+        Title="Subscribe">
+    <Grid>
+        <DataGrid x:Name="SubscribeGrid" 
+                  x:CompileBindings="False"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  GridLinesVisibility="All"
+                  BorderThickness="1"
+                  BorderBrush="Gray"
+                  Margin="0, 20">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Subscribe_id" Binding="{Binding Subscribe_id}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Client" Binding="{Binding Client}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Direction" Binding="{Binding Direction}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Working_days" Binding="{Binding Working_days}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
+
